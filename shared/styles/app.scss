@@ -1,0 +1,20 @@
+@import "vars";
+
+body {
+  margin: 0;
+  font-family: 'Bahnschrift Regular', sans-serif;
+  color: $text;
+
+  background-color: $background;
+}
+
+@font-face {
+  font-family: 'Bahnschrift Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Bahnschrift Regular'), url('/BAHNSCHRIFT 1.woff') format('woff');
+}
+
+h1, h2, h3, h4, h5 {
+  font-weight: normal;
+}

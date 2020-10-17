@@ -1,0 +1,36 @@
+@import "shared/styles/vars";
+@import "shared/styles/app.global";
+
+.link {
+
+  cursor: pointer;
+
+  margin: 5px 40px 5px 0;
+  font-size: 18px;
+
+  &:hover {
+    .arrow {
+      color: $gold;
+    }
+  }
+
+  text-transform: uppercase;
+  color: $text;
+}
+
+.selected_box {
+  border-radius: 3px;
+  padding: 4px 10px;
+}
+
+.selected {
+  @extend .gold;
+
+  color: $element;
+
+  &:hover {
+    .arrow {
+      color: $element; // Override old effect.
+    }
+  }
+}

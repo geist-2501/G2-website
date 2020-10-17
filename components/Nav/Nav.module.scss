@@ -1,0 +1,33 @@
+@import "shared/styles/vars";
+
+.nav {
+
+  margin: 20px 0;
+
+  display: flex;
+  justify-content: space-between;
+
+  .nav_content {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+  }
+}
+
+.nav_left {
+  width: 20vw;
+  max-width: 300px;
+  border-radius: 0 5px 5px 0;
+
+  justify-content: flex-end;
+}
+
+.nav_right {
+  width: 60vw;
+  border-radius: 5px 0 0 5px;
+}
+
+.logo {
+  margin: 3px 0 0 0;
+  line-height: 0.95;
+}
