@@ -1,0 +1,18 @@
+.hero_banner {
+  margin: 300px 0;
+
+  .hero_text {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    h1 {
+      margin: 0;
+      display: inline;
+
+      text-transform: uppercase;
+    }
+  }
+}
+
+

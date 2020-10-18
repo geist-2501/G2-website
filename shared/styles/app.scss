@@ -6,6 +6,18 @@ body {
   color: $text;
 
   background-color: $background;
+
+  min-height: 100vh;
+
+  display: flex;
+  flex-direction: column;
+}
+
+#__next {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
 }
 
 @font-face {
@@ -17,4 +29,16 @@ body {
 
 h1, h2, h3, h4, h5 {
   font-weight: normal;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 24px;
+}
+
+p {
+  font-size: 18px;
 }
