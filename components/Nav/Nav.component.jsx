@@ -10,8 +10,6 @@ export default function NavComponent() {
       </div>
       <nav className={`${styles.nav_right} ${styles.nav_content} element`}>
         <NavButton href="/" text="Home" />
-        <NavButton href="/projects" text="Projects" />
-        <NavButton href="/blog" text="Blog" />
         <NavButton href="/about" text="About" />
       </nav>
     </div>
