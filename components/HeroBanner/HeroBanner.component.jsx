@@ -5,16 +5,18 @@ export default function HeroBanner() {
   return (
     <div className={styles.hero_banner}>
       <div className={styles.hero_text}>
-        <div>
+        <div className={styles.text_l}>
           <h1>Technical</h1>
         </div>
-        <div>
+        <div className={styles.text_r}>
           <h1>Artist</h1>
+          <div className={styles.dash} />
         </div>
-        <div>
+        <div className={styles.text_l}>
           <h1>Creative</h1>
+          <div className={styles.dash} />
         </div>
-        <div>
+        <div className={styles.text_r}>
           <h1>Engineer</h1>
         </div>
       </div>

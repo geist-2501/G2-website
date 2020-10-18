@@ -3,21 +3,21 @@ import { useRouter } from 'next/router';
 import Link from 'next/link';
 import styles from './NavButton.module.scss';
 
-export default function NavButton({ children, href }) {
+export default function NavButton({ text, href }) {
   const router = useRouter();
 
   const selectedClass = router.pathname === href ? styles.selected : '';
 
   return (
     <div className={styles.link}>
-      <div className={`${styles.selected_box} ${selectedClass}`}>
-        <Link href={href}>
-          <span>
+      <Link href={href}>
+        <div className={`${styles.selected_box} ${selectedClass}`}>
+          <p>
             <span className={styles.arrow}>&gt; </span>
-            {children}
-          </span>
-        </Link>
-      </div>
+            {text}
+          </p>
+        </div>
+      </Link>
     </div>
   );
 }
