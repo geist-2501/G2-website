@@ -9,6 +9,7 @@
     "linebreak-style": "off",
     "react/prop-types": "off",
     "react/jsx-one-expression-per-line": "off",
-    "padded-blocks": "off"
+    "padded-blocks": "off",
+    "max-len": "off"
   }
 }

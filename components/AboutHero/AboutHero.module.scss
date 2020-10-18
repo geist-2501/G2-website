@@ -1,0 +1,39 @@
+@import "shared/styles/app.global";
+
+.about_hero {
+  margin-top: 20vh;
+  margin-bottom: 20vh;
+
+  h2, p {
+    margin: 0;
+  }
+
+  .description {
+    @extend .sub_colour;
+    margin-left: 5px;
+  }
+}
+
+.who_am_i {
+  margin-top: -5px;
+  margin-bottom: 0;
+}
+
+.what_ive_done {
+  margin-top: -5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  p {
+    @extend .sub_text;
+  }
+}
+
+.what_i_do {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+
+  .description {
+    @extend .sub_text;
+  }
+}

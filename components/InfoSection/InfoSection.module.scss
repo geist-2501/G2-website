@@ -1,0 +1,40 @@
+@import "shared/styles/vars";
+
+.info_section {
+  display: grid;
+  grid-template-columns: 2fr 2fr 6fr;
+
+  margin: 20px 0 40px;
+
+  .info_title {
+    grid-column: 1 / span 1;
+
+    display: flex;
+
+    height: fit-content;
+
+    p {
+      display: flex;
+      margin: 0;
+    }
+
+    .dash {
+      height: auto;
+      margin: 0 0 6px 6px;
+      width: 100%;
+      border-bottom: 2px solid $text;
+    }
+  }
+
+  .info_content {
+    grid-column: 3 / span 1;
+  }
+}
+
+.dollar {
+  margin-right: 2px;
+}
+
+.highlight {
+  color: $gold;
+}
