@@ -33,7 +33,17 @@ export default class DotWaveEffect extends React.Component {
   }
 
   componentDidMount() {
+    this.setUp();
+    this.initGeometry();
+    this.initRenderer();
 
+    window.addEventListener('resize', this.onWindowResize, false);
+    window.addEventListener('pointermove', this.onPointerMove, false);
+
+    this.animate();
+  }
+
+  setUp() {
     this.camera = new THREE.PerspectiveCamera(50, document.body.clientWidth / document.body.clientHeight, 1, 10000);
     this.camera.position.x = 1000;
     this.camera.position.y = 1000;
@@ -43,6 +53,10 @@ export default class DotWaveEffect extends React.Component {
 
     const offset = new THREE.Vector3(200, 0, 200);
     this.camera.lookAt(offset.add(this.scene.position));
+  }
+
+  initGeometry() {
+    const material = this.getShaderMaterial();
 
     const numParticles = this.AMOUNTX * this.AMOUNTY;
 
@@ -67,31 +81,30 @@ export default class DotWaveEffect extends React.Component {
       }
     }
 
-    const material = new THREE.ShaderMaterial({
-      uniforms: {
-        color: { value: new THREE.Color(0x7C7C96) },
-      },
-      vertexShader: this.vertexShader,
-      fragmentShader: this.fragmentShader,
-    });
-
     const geometry = new THREE.BufferGeometry();
     geometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
     geometry.setAttribute('scale', new THREE.BufferAttribute(scales, 1));
 
     this.particles = new THREE.Points(geometry, material);
     this.scene.add(this.particles);
+  }
 
+  initRenderer() {
     this.renderer = new THREE.WebGLRenderer({ antialias: true });
     this.renderer.setPixelRatio(window.devicePixelRatio);
     this.renderer.setSize(document.body.clientWidth, document.body.clientHeight);
     this.renderer.setClearColor(0x272733);
     this.mount.appendChild(this.renderer.domElement);
+  }
 
-    window.addEventListener('resize', this.onWindowResize, false);
-    window.addEventListener('pointermove', this.onPointerMove, false);
-
-    this.animate();
+  getShaderMaterial() {
+    return new THREE.ShaderMaterial({
+      uniforms: {
+        color: { value: new THREE.Color(0x7C7C96) },
+      },
+      vertexShader: this.vertexShader,
+      fragmentShader: this.fragmentShader,
+    });
   }
 
   animate() {
