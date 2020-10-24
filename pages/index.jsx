@@ -5,6 +5,7 @@ import NavComponent from '../components/Nav/Nav.component';
 import Footer from '../components/Footer/Footer.component';
 import HeroBanner from '../components/HeroBanner/HeroBanner.component';
 import DotWaveEffect from '../components/DotWaveEffect/DotWaveEffect.component';
+import HeroLogo from '../components/HeroLogo/HeroLogo.component';
 
 export default function Home() {
   return (
@@ -15,7 +16,9 @@ export default function Home() {
       <DotWaveEffect>
         <NavComponent />
         <SectionLayout>
-          <HeroBanner />
+          <HeroBanner>
+            <HeroLogo />
+          </HeroBanner>
         </SectionLayout>
         <Footer />
       </DotWaveEffect>
