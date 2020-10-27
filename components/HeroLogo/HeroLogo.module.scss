@@ -1,4 +1,4 @@
-
+@import "shared/styles/sizing";
 @import "shared/styles/vars";
 $margin-padding: 8px;
 
@@ -13,9 +13,11 @@ $margin-padding: 8px;
     margin: 0 $margin-padding;
     display: inline;
 
-    line-height: 48px;
-
     text-transform: uppercase;
+
+    @include md {
+      line-height: 48px;
+    }
   }
 
   :global(#anim-in-stay) {
@@ -28,7 +30,11 @@ $margin-padding: 8px;
 
     margin-bottom: $margin-padding;
 
-    border-bottom: 4px solid $text;
+    border-bottom: 2px solid $text;
+
+    @include md {
+      border-bottom: 4px solid $text;
+    }
   }
 
   .text_container {

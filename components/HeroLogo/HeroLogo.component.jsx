@@ -4,16 +4,15 @@ import styles from './HeroLogo.module.scss';
 
 export default class HeroLogo extends React.Component {
 
-  constructor(props) {
-    super(props);
+  componentDidMount() {
+
+    const mq = window.matchMedia('(max-width: 700px)');
 
     this.anim = {
-      distance: '3em',
+      distance: mq.matches ? '1.75em' : '3em',
       delay: 600,
     };
-  }
 
-  componentDidMount() {
     this.current = [
       anime({
         targets: '#anim-in-stay',
