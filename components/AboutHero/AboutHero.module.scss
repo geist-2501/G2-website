@@ -1,4 +1,5 @@
 @import "shared/styles/app.global";
+@import "shared/styles/sizing";
 
 .about_hero {
   margin-top: 20vh;
@@ -10,19 +11,31 @@
 
   .description {
     @extend .sub_colour;
-    margin: 0 5px;
+    margin: 5px 0 15px 5px;
+    @include md {
+      margin: 0 5px;
+    }
   }
 }
 
 .who_am_i {
-  margin-top: -5px;
-  margin-bottom: 0;
+  @include md {
+    margin-top: -5px;
+    margin-bottom: 0;
+  }
 }
 
 .what_ive_done {
-  margin-top: -5px;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+
+  @include md {
+    margin-top: -5px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+  }
 
   p {
     @extend .sub_text;

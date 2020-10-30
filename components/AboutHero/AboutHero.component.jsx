@@ -7,7 +7,7 @@ export default function AboutHero() {
     <div className={styles.about_hero}>
       <InfoSection title="whoam" highlight="i">
         <h2 className={styles.who_am_i}>
-          I'm a Computer Scientist student at the University of St Andrews. I love solving technical challenges creatively and tackling artistic challenges industrially.
+          I'm a Computer Science student at the University of St Andrews. I love solving technical challenges creatively and tackling artistic challenges industrially.
           <br /><br />
           Most people think think you're either creative or technical, artist or engineer - but I'd disagree. The hardest problems usually require the most out of the box solution.
           <br /> <br />

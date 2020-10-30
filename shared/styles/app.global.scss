@@ -1,4 +1,5 @@
 @import "vars";
+@import "sizing";
 
 .element {
   background-color: $element;
@@ -11,7 +12,10 @@
 }
 
 .sub_text {
-  font-size: 14px;
+  font-size: 13px;
+  @include md {
+    font-size: 14px;
+  }
 }
 
 .sub_colour {
